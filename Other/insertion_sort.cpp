@@ -12,7 +12,7 @@ void insertion_sort(int a[],int n)
     {
         for(int j=i-1;j>=0;j--)
         {
-            if(a[i]<a[j])swap(a[i],a[j]);
+            if(a[j+1]<a[j])swap(a[j+1],a[j]);
             else break;
         }
     }
