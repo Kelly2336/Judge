@@ -9,7 +9,7 @@ int ST[lgn][maxn];
 void build(int n)//O(NlgN)
 {
     for(int i=1;i<=n;i++)ST[0][i]=a[i];
-    for(int i=1;(1<<i)<n;i++)
+    for(int i=1;(1<<i)<n;i++)//好像要等號？？
     {
         int k=n-(1<<i)+1;
         for(int j=1;j<=k;j++)
