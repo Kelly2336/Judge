@@ -1,17 +1,8 @@
-int binary_search( int a, int left, int right, int key )
-{
-    while( left <= right )
-    {
-        int mid = (left+right) / 2;
-        if( a[mid] == key ) return mid; //找到了
-        if( a[mid] < key ) right = mid-1; //下次找左邊的區間
-        else left = mid+1; //下次找右邊的區間
-    }
-    return -1; //沒找到
-}
-int main()
-{ 
-    int a[11] = {1,2,17,6,7,5,8,10,15,3,19};
-    sort( a, a+11 ); //一定要先排序
-    int pos = binary_search( a, 0, 10, 3 );
-}
+int a[5] = {1,2,5,7,9};
+int* pos = lower_bound( a, a+n, key );
+vector<int> v (a, a+5);
+vector<int>::iterator iter;
+iter = lower_bound( v.begin(), v.end(), key );
+int value = *iter;    // value = *pos;
+return 的型態是指標/iterator，代表找到的位置
+如果找不到，會回傳容器尾端的位置.end()
