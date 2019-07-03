@@ -1,8 +1,8 @@
-// 找x屬於哪一個集合
-// 順便把x直接接到集合代表的下面
-// 複雜度是樹的高度，所以邊做邊把樹壓平
-int Find(int x)
+void Union(int x, int y)
 {
-    if( x != par[x] ) par[x] = Find(par[x]);
-    return par[x];
+    int px = Find(x);
+    int py = Find(y);
+    if( rnk[px]>rnk[py] ) par[py] = px;  
+    else if( rnk[px]<rnk[py] ) par[px] = py;
+    else par[px] = py, rnk[py]++;
 }
