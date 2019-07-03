@@ -1,10 +1,9 @@
-for(int i=0; i<V-1; i++) // V-1次就夠了
-{
-    // 找離起點最近且還沒被用過的點
-    int u , min_dis = INF;
-    for(int j=0; j<=V; j++)
+    for(int uu=0; uu<V; uu++)
     {
-        if( !visit[j] && dis[j]<min_dis )
-            u = j, min_dis = dis[j];
+        if( graph[u][uu]!=INF ) //和u相鄰?
+        {
+            if( dis[uu] > dis[u]+graph[u][uu] )
+                dis[uu] = dis[u]+graph[u][uu] ;
+        }
     }
-    visit[u] = true;
+}
