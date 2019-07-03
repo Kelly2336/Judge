@@ -1,9 +1,10 @@
-    for(int uu=0; uu<V; uu++)
+int par[maxn];
+int rnk[maxn];
+int init(int n)
+{
+    for(int i=0; i<n; i++)
     {
-        if( graph[u][uu]!=INF ) //和u相鄰?
-        {
-            if( dis[uu] > dis[u]+graph[u][uu] )
-                dis[uu] = dis[u]+graph[u][uu] ;
-        }
+        par[i] = i;
+        rnk[i] = 1;
     }
 }
