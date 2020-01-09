@@ -1,1 +1,1 @@
-Some code I've summited to some online judge.
+Some codes I've summited to some online judges.
